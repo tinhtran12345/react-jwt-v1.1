@@ -14,10 +14,10 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+connectDatabase();
 // ROUTES
 initRoute(app);
 // CONNECT DB
-connectDatabase();
 
 const port = process.env.PORT || 8080;
 app.listen(port, () => {
